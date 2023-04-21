@@ -1,51 +1,67 @@
-# Objects
+# Objects in JavaScript
 
-In JavaScript, objects are fundamental, understanding how objects works makes easier to also understand the language.
+Hello everyone, in this file I will be explaining how we can create objects with JavaScript. Objects are one of the most fundamental building block of this language, and they play a huge role in more advanced topics in web development.
 
-An object in real life is an element that has different features. So for example a car is an object, and its attributes or features are the tires, color, brand, year, among others
+An object can be defined as a storing of key-value pairs. This might sound suspiciously similar to something like Python dictionaries but objects are way more powerful and flexible, since they can store any type of variable we want, and even functions and objects themselves. 
 
-To define an object in JavaScript we declare and initalize a variable as a key-value pair:
+Something else to keep in mind is that these work with some object oriented programming principles, so knowing the basics about the topic will help you out in better understanding their behavior. 
 
-    var car = {
-        brand : "Audi",
-        model: "Q7",
-        year : 2021,
-        color: "green"
-    };
+The basic syntax to create an object is 
 
-Objects are extremely versatile and powerful, they can even store functions and objects inside them
+```
+let myObject = {
+    feature1 : feature1Name,
+    feature2 : feature2Name,
+    feature3 : feature3Name,
+    feature4 : feature3Name,
+}
+```
+
+As said before, objects are collections of key-value pairs, where the keys represent the features and the values their corresponding feature name. 
+
+## Accesing to the features of an object
+
+In order to access to the features of an object we use the syntax `myObject.feature`. Recall that we could also store functions as keys, so in that case we will do something like `myObject.featureFunction()`
+
+### Example
+Let's say we want to create a Pokemon with the following features
+
+- name
+- generation
+- stats
+- information
+  
+Where stats is an object containing the values of attack, defense, special attack, special defense and speed; and information is a function that displays all the features of the pokemon as a string. Here is how we would do it
 
 
-    var pokemon = {
+```
+var pokemon = {
 
-        name : "Escavalier",
+    name : "Escavalier",
 
-        generation : 5,
+    generation : 5,
 
-        stats : {
-            attack : 250,
-            defense : 210,
-            spAttack : 98,
-            spDefense : 105,
-            speed : 80
-        },
+    stats : {
+        attack : 250,
+        defense : 210,
+        spAttack : 98,
+        spDefense : 105,
+        speed : 80
+    },
 
-        power : function(att){
-            return `Escavalier has attacked with ${att}`
-        },
+    info : function(){
 
-        info : function(){
-
-            return `Name: ${this.name} | Generation: ${this.generation} | Stats: [${this.stats.attack},${this.stats.defense},${this.stats.spAttack},${this.stats.spDefense},${this.stats.speed}]` 
-
-        }
+        return `Name: ${this.name} | Generation: ${this.generation} | Stats: [${this.stats.attack},${this.stats.defense},${this.stats.spAttack},${this.stats.spDefense},${this.stats.speed}]` 
 
     }
 
+}
+```
 
-Object manipulation is very well relating to object oriented programming, so there are some concepts that we must recall, such as the `this` keyword. Recall that we use it when we want to refer the object itself. 
+Notice that here we are using the keyword `this`, which refers to the object itself that we are declaring and initializing. Here is where some basic knowledge of OOP makes it easier to understand objects. 
 
-## Constructor functions
+
+## Constructor functions 
 When we have a lot of variables that we want to convert to objects, it is very tedious to perform this task manually. Constructors allow us to do this in a fast and easy way. 
 
     function car(brand,model,year){
@@ -62,4 +78,5 @@ This is almost the exact same way we create object of specific type in object or
     var myCar = new car("Audi","Q7",2021);
 
 So far we have created an object of "class" `car`, notice that we didn't have to set manually the instance in any time of the code. Just by using `new` and the previous existing object was enough. This way we can create as many cars as we want. 
+
 
