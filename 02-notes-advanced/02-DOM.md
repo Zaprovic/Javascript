@@ -1,4 +1,4 @@
-# DOM (Document Object Model)
+# DOM manipulation
 
 DOM is a programming interface for web documents, and it represents the page so that programs can change the document structure, style and content.
 
@@ -128,3 +128,18 @@ If we do `console.log(h1)`, the output in the browser would look something like 
 Now everything makes more sense. These are all the attributes that we are accessing in all of those shown before. Just like any other object, using dot notation `.` we can access to a specific key and change its value. 
 
 Every tag that we grab as a variable in the `script.js` is an object itself, with tenths of keys and their corresponding values. 
+
+We can also insert new HTML tags. Let's try to attach a new image to an existing `<p>` tag.
+
+
+```
+const img = document.createElement('img');
+
+img.setAttribute("src","https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d0/latest/20150621180604/Lucario.png/1200px-Lucario.png")
+
+p.append(img);
+```
+
+By creating a new element of `<img>` we can access to all of its keys and values, since it is an object itself. Now it is just as simple as modifying the `img.src` or using `.setAttribute()` , either option will work fine. Finally, it is just a matter of specifying where we want to put the image, so by using `.append()` in any of the others tags, the image will be displayed in the screen. 
+
+
