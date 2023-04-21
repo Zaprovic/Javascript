@@ -30,6 +30,10 @@ As an example, say we have two input containers and we want to add the result an
         <input type="text" id="calc-two" placeholder="Type something here">
 
         <button id="btn-calculate">Calculate</button>
+
+        <p class="outcome">
+
+        </p>
     </main>
     
 </body>

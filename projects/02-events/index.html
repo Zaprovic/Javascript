@@ -4,29 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
 </head>
 <body>
 
-    <header>
-        <h1>
-            Event listening
-        </h1>
+    <header class="head-container">
+        <h1>Calculator</h1>
     </header>
 
     <main>
-        <input type="text" id="calc-one" placeholder="Type something here">
 
-        <input type="text" id="calc-two" placeholder="Type something here">
+        <div class="main-container">
 
-        <button id="btn-calculate">Calculate</button>
+            <input type="text" placeholder="Number 1" class="value1">
+            <input type="text" placeholder="Number 2" class="value2">
+    
+            <button>Calculate</button>
 
-        <p class="outcome">
+        </div>
 
-        </p>
+        <div class="p-container">
+            <p class="result">
+
+            </p>
+        </div>
+
+
+
+
     </main>
     
 </body>
-
 <script src="./script.js"></script>
 </html>

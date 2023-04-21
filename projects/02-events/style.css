@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    
+    font-family: cursive;
+    background-color: lightsalmon;
+}
+
+.head-container{
+    display: flex;
+    justify-content: center;
+    padding: 1.8rem;
+    font-size: 2.8rem;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.5rem;
+    flex-wrap: wrap;
+}
+
+.main-container input{
+    width: 25rem;
+    height: 10rem;
+    border-radius: 2.5rem;
+    border: 0.5rem solid ;
+    background-color: lightskyblue;
+}
+
+input[type="text"]{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: cursive;
+}
+
+button{
+    height: 10rem;
+    width: 25rem;
+    border-radius: 2.5rem;
+    border: 0.5rem solid ;
+    background-color: lightseagreen;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.p-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10rem;
+}
+
+.result{
+    font-size:3rem;
+}
+
+
+
+
+
+
+
+
+
+

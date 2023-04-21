@@ -1,24 +1,21 @@
-const h1 = document.querySelector("h1");
-const v1 = document.querySelector("#calc-one");
-const v2 = document.querySelector("#calc-two");
-const btn = document.querySelector("#btn-calculate");
-const out = document.querySelector(".outcome");
+const v1 = document.querySelector(".value1");
+const v2 = document.querySelector(".value2");
+const btn = document.querySelector("button");
+const output = document.querySelector(".result");
 
-btn.setAttribute("onclick","btnOnClick()")
+btn.setAttribute("onclick","btnOnClick()");
 
 function btnOnClick(){
     const sum = Number(v1.value) + Number(v2.value);
-    out.innerText = sum;
+    const subs = Number(v1.value) - Number(v2.value);
+    const mul = Number(v1.value) * Number(v2.value);
+    const div = Number(v1.value) / Number(v2.value);
 
-    
-}
+    output.innerText = `The sum is: ${sum}
+    The substraction is: ${subs}
+    The multiplication is: ${mul}
+    The division is: ${div}
+    `;
 
-console.log(emts)
-
-
-
-
-emts = {
-    h1,v1,v2,btn,out
 };
 
