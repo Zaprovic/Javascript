@@ -13,8 +13,12 @@ console.log({
 
 });
 
-console.log(h1);
+const img = document.createElement('img');
+img.setAttribute("src","https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d0/latest/20150621180604/Lucario.png/1200px-Lucario.png")
 
+p.append(img)
+
+console.log(img)
 
 
 
