@@ -16,7 +16,7 @@ JavaScript was originally develop to work in the browsers in order to tackle thi
 
     JavaScript runs in sometime known as a browser engine. This is a JIT compiler that translates into machine code, which is given to the browser to display the output in screen. 
 
-Javascript is also ***backwards compatible***, which means that every new modules that are release to newer version of the language will not break older codes, however they cannot be used in the current enviroment ruintime. 
+Javascript is also ***backwards compatible***, which means that every new modules that are release to newer version of the language will not break older codes, however they cannot be used in the current enviroment runtime. 
 
 
 
