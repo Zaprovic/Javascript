@@ -16,7 +16,7 @@ Some of these are can be applied not only to numbers. This has to do with coerci
 
 #### Assignment operators
 
-### Comparison operators
+#### Comparison operators
 - `=` used to assign a variable to specified value
 - `==` only compares the value of variables
 - `===` compares both value and type
