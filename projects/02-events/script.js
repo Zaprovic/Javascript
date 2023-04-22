@@ -4,6 +4,7 @@ const btn = document.querySelector("button");
 const output = document.querySelector(".result");
 
 btn.setAttribute("onclick","btnOnClick()");
+btn.addEventListener("click",btnOnClick);
 
 function btnOnClick(){
     const sum = Number(v1.value) + Number(v2.value);
@@ -18,4 +19,6 @@ function btnOnClick(){
     `;
 
 };
+
+console.log({btn});
 

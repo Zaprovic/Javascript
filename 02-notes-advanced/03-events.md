@@ -84,6 +84,29 @@ function btnOnClick(){
 
 Here we stored the value of the sum in a variable called `sum` . Explicit coercion must be applied because by default the values of an input are read as of type string. After that we created a new paragraph of class `outcome` and store it in a variable with `.querySelector()`. Finally we changed the content of `out` by inserting the sum of the two input numbers. 
 
+## Even listeners
+There is a more general way of dealing with events. Notice that in the previous example, what we did in order to keep track of the clicking was to change the attribute of `onclick` in the object `btn` . This works, but its not the best practice and here is why: 
+
+1. It mixes HTML and JavaScript code, and this makes the code harder to read and maintain
+
+2. It overrides any existing `onclick` attributes on the button which may cause unintended stuff to happen.
+
+3. It is not flexible at all
+
+Here is where we introduce the big star of events: `.addEventListener()` . This is a function that is not only considered the best practice for event handling, but allows for much more complex events in our scripts. Being said that, we can perform the following change to the example
+
+**This line....**
+```
+btn.setAttribute("onclick","btnOnClick()");
+```
+
+**change it to this line**
+```
+btn.addEventListener("click",btnOnClick);
+```
+
+There are hundreds of different events we can apply to an element by using this approach. 
+
 
 
 
