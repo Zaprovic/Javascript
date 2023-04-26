@@ -12,5 +12,6 @@
     "node"
   ],
   "author": "Zaprovic",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }
