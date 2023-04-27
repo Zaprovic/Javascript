@@ -1,5 +1,13 @@
-const a = [1,1,[2,3,[4,4,5,6]],4,[1,3,5,6,[1,2,4]]];
+const obj = [
+	{ pokeID: 1, pokeName: "Escavalier", types: ["Bug", "Steel"] },
+	{ pokeID: 2, pokeName: "Mimikyu", types: ["Ghost", "Fairy"] },
+	{ pokeID: 3, pokeName: "Hydreigon", types: ["Dragon", "Dark"] },
+	{ pokeID: 4, pokeName: "Swampert", types: ["Water", "Ground"] },
+];
 
-console.log(a.flat())
-console.log(a.flat(2))
-console.log(a.flat(Infinity))
+const names = obj.flatMap((names) => {
+    return names.types
+})
+
+console.log(names);
+
