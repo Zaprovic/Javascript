@@ -34,8 +34,6 @@ const dataGetter = (d, titles) => {
 	return Promise.allSettled(promises);
 };
 
-
-
 const titles = ["Iron Man", "Spiderman Homecoming"];
 
 const out = async () => {
