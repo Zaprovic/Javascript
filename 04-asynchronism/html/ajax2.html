@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button id="button-one">Get usernames</button>
+
+		<br />
+		<br />
+
+		<h3 class="usernames">Usernames:</h3>
+
+		<script>
+			const bnt1 = document.querySelector("#button-one");
+			const usernames = document.querySelector(".usernames");
+
+			bnt1.addEventListener("click", loadUser);
+
+			function loadUser() {
+				xhr = new XMLHttpRequest();
+
+				xhr.open("GET", "./info.json", true);
+
+				xhr.onload = function () {
+					if (this.status === 200) {
+						let users = JSON.parse(this.responseText);
+						let names = [];
+
+						for (user of users) {
+							console.log(user.name);
+							names.push(user.name);
+						}
+						usernames.append(names);
+					}
+				};
+
+				xhr.send();
+			}
+
+            loadUser()
+		</script>
+	</body>
+</html>

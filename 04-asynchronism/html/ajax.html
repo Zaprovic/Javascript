@@ -9,32 +9,34 @@
 	<body>
 		<button id="button">Get text file</button>
 
+		<div id="text"></div>
+
 		<script>
 			//Creating even listenter
 			const btn = document.querySelector("#button");
-			btn.addEventListener("click", loadText);
-
-			const loadText = () => {
+			btn.addEventListener("click", () => {
 				let xhr = new XMLHttpRequest();
 
-				xhr.open("GET", "./simple.txt", true);
-				console.log(`Ready state: ${xhr.readyState}`);
-				// xhr.onload = function () {
-				// 	if (this.status === 200) {
-				// 		console.log(this.responseText);
-				// 	}
+				xhr.open("GET", "https://pokeapi.co/api/v2/pokemon/ditto", true);
 
-				// };
-
-				xhr.onreadystatechange = function () {
-					if (this.readyState === 4 && this.status === 200) {
-						// console.log(this.responseText);
+				xhr.onprogress = function () {
+					console.log("loading...");
+				};
+				xhr.onload = function () {
+					if (this.status === 200) {
+						console.log(this.responseText);
+						const text = document.querySelector("#text");
+						text.innerText = xhr.responseText;
 					}
 				};
 
-				//sends request to the client
+				xhr.onerror = function () {
+					console.log("Request error");
+				};
+
+				//sends request
 				xhr.send();
-			};
+			});
 		</script>
 	</body>
 </html>
