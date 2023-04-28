@@ -14,3 +14,13 @@ const fetchData = async (urlAPI) => {
 
 	console.log(data);
 };
+
+(async () => {
+	try {
+		const data = await fetchData(`${API}/products`);
+		console.log(data);
+	} catch (error) {
+		console.error(error);
+	}
+})();
+
